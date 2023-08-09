@@ -1,0 +1,104 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "type": "kgs",
+      "age": 3,
+      "class": "KG1",
+      "name": "abhishek",
+      "gender": "male",
+      "phone": "23456978"
+    },
+    {
+      "id": 2,
+      "type": "kgs",
+      "age": 4,
+      "class": "KG2",
+      "name": "sakshi",
+      "gender": "female",
+      "phone": "23456978"
+    },
+    {
+      "id": 3,
+      "type": "kgs",
+      "age": 5,
+      "class": "KG3",
+      "name": "rohit",
+      "gender": "male",
+      "phone": "23456978"
+    },
+    {
+      "id": 5,
+      "type": "primary",
+      "age": 7,
+      "class": "class 2",
+      "name": "simran w",
+      "gender": "female",
+      "phone": "23456978"
+    },
+    {
+      "id": 6,
+      "type": "primary",
+      "age": 10,
+      "class": "class 5",
+      "name": "rakesh",
+      "gender": "male",
+      "phone": "23456978"
+    },
+    {
+      "id": 7,
+      "type": "secondary",
+      "age": 11,
+      "class": "class 6",
+      "name": "suresh",
+      "gender": "male",
+      "phone": "23456978"
+    },
+    {
+      "id": 9,
+      "type": "secondary",
+      "age": 14,
+      "class": "class 9",
+      "name": "Andria",
+      "gender": "female",
+      "phone": "23456978"
+    },
+    {
+      "name": "ayush",
+      "gender": "male",
+      "phone": 123980,
+      "age": 12,
+      "class": "class 7",
+      "type": "secondary",
+      "id": 10
+    },
+    {
+      "name": "karan sang",
+      "gender": "male",
+      "phone": 2896342,
+      "age": 13,
+      "class": "class 8",
+      "type": "secondary",
+      "id": 11
+    },
+    {
+      "name": "sam",
+      "gender": "male",
+      "phone": 865,
+      "age": 8,
+      "class": "class 3",
+      "type": "primary",
+      "id": 12
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

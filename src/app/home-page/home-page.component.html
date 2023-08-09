@@ -1,0 +1,72 @@
+<mat-card class="add-edit-form">
+    <form [formGroup]="studentData" fxFill fxLayoutGap="10px" fxLayout="column" fxLayoutAlign="start center">
+        <div fxLayout="row" fxLayoutGap="100px" fxLayoutAlign="center start">
+            <div fxLayout="row" fxLayoutGap="10px">
+                <mat-form-field>
+                    <mat-label>Filter on type</mat-label>
+                    <mat-select formControlName="typeFilter">
+                      <mat-option value="all">all</mat-option>
+                      <mat-option value="primary">primary</mat-option>
+                      <mat-option value="secondary">secondary</mat-option>
+                      <mat-option value="kgs">kgs</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Filter on age</mat-label>
+                    <input matInput type="number" formControlName="ageFilter">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Filter on class</mat-label>
+                    <input matInput type="text" formControlName="classFilter">
+                </mat-form-field> 
+                <button mat-button (click)="applyFilter()">apply Filter</button>
+            </div>
+            <button mat-raised-button mat-button color="primary" (click)="addStudent()">Add Student</button>
+        </div>
+        <table border=1>
+            <thead>
+                <th>name</th>
+                <th>gender</th>
+                <th>phone no</th>
+                <th>age</th>
+                <th>class</th>
+                <th>type</th>
+                <th>edit/delete</th>
+            </thead>
+            <tbody *ngIf="data" formArrayName="students">
+                <tr [formGroup]="student" *ngFor="let student of studentsControls; let i=index">
+                    <td>
+                        <input matInput type="text" formControlName="name">
+                    </td>
+                    <td>
+                        <input matInput type="text" formControlName="gender">
+                    </td>
+                    <td >
+                        <input matInput type="text" formControlName="phonenumber">
+                    </td>
+                    <td >
+                        <input matInput type="number" formControlName="age">
+                    </td>
+                    <td >
+                        <input matInput type="text" formControlName="class">
+                    </td>
+                    <td >
+                        <input matInput type="text" formControlName="type">
+                    </td>
+                    <td fxLayout="row">
+                        <button mat-button (click)="editStudent(student)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-button (click)="deleteStudent(student.value.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <input matInput hidden>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+
+    </form>
+</mat-card>
